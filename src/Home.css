@@ -1,0 +1,225 @@
+.home,
+.home * {
+  box-sizing: border-box;
+}
+.home {
+  background: #272727;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: center;
+  justify-content: flex-start;
+  height: 391vh;
+  position: relative;
+  overflow: hidden;
+}
+.first-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  padding-bottom: 5%;
+
+
+ 
+}
+.text-1 {
+  display: flex;
+  width: 80%;
+  height: 70%;
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #FFF;
+  text-align: center;
+  font-family: "Kanit-Medium", Helvetica;
+  font-size: 8vh;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 100%;
+
+}
+.text-2 {
+  color: #ffffff;
+  text-align: center;
+  font-family: "Kanit-Medium", Helvetica;
+  font-size: 2vh;
+  line-height: 100%;
+  font-weight: 100%;
+  position: relative;
+  width: 60%;
+  height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  line-height: 100%;
+
+}
+
+.projectsPage {
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+
+
+}
+
+.projectTitle{
+  display: flex;
+  width: 70%;
+  height: 10%;
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #FFF;
+  text-align: center;
+  font-family: "Kanit-Medium", Helvetica;
+  font-size: 3vh;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%; 
+
+}
+
+.projectRectangles {
+  display: flex;
+  flex-direction: row;
+  gap: 5%;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+  width: 100vw;
+  height: 90%;
+  position: relative;
+  padding: 2% 0;
+}
+
+
+.rectangle-1,
+.rectangle-2,
+.rectangle-3,
+.rectangle-4 {
+  background: #d9d9d9;
+  flex-shrink: 0;
+  width: 40vw;
+  height: 35vh;
+  position: relative;
+  transition: width 0.2s ease-in-out, height 0.2s ease-in-out;
+  
+}
+
+
+@media (min-width: 768px) {
+
+
+
+  .rectangle-1:hover,
+  .rectangle-2:hover,
+  .rectangle-3:hover,
+  .rectangle-4:hover {
+    width: 43vw;
+    height: 38vh;
+  }
+
+}
+
+
+
+.adv {
+  background: #d9d9d9;
+  width: 100vw;
+  height: 30vh;
+
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+.advertisement-text {
+  flex-shrink: 0;
+  color: #000;
+  font-family: "Kanit-Medium", Helvetica;
+  font-size: 8vh;
+  font-style: normal;
+  font-weight: 1000;
+}
+
+
+.spacer{
+  height: 10vh;
+  flex-shrink: 0;
+}
+
+/* Media Queries per Schermi Più Piccoli */
+@media (max-width: 768px) {
+  
+  .home {
+    height: auto;
+    padding: 2% 0;
+  }
+
+  .first-page {
+    height: 100vh;
+    padding: 5% 0;
+  }
+
+  .text-1 {
+    font-size: 6vh;
+  }
+
+  .text-2 {
+    font-size: 1.5vh;
+    width: 80%;
+  }
+
+  .projectsPage {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .projectTitle {
+    width: 90%;
+    font-size: 2vh;
+  }
+
+  .projectRectangles {
+    flex-direction: column;
+    width: 90%;
+    padding: 5% 0;
+  }
+
+  .projectRectangles > div {
+    width: 90%;
+    margin: 5% 0;
+  }
+
+  .adv {
+    height: 20vh;
+  }
+
+  .advertisement-text {
+    font-size: 6vh;
+  }
+
+  .spacer {
+    height: 5vh;
+  }
+
+}
+
+
+
+
+
