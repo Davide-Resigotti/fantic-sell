@@ -1,69 +1,42 @@
-import React from "react";
-import "./Home.css"
+
+import './Home.css'; // Assicurati di avere il CSS per lo stile
+import './buttons.css';
+import { Link } from 'react-router-dom';
 
 
-
-
-export const Home = () => {
+const Home = () => {
+ 
   return (
+    
     <div className="home">
+
+
       <div className="first-page">
         <p className="text-1">
           Fantic 50 Casa 2018
         </p>
+        <div className="buttons">
+        <Link to="/photos">
+            <button>FOTO</button>
+          </Link>
+          <Link to="/videos">
+            <button>VIDEO</button>
+          </Link>
+          <Link to="/contacts">
+            <button>CONTATTI</button>
+          </Link>
+        </div>
+
+
         <p className="text-2">
           qualsiasi tipo di informazione o foto o video potete trovarla qui
         </p>
+
+    
       </div>
-      <div className="projectsPage">
-        <div className="projectTitle">
-          <h1>FOTO</h1>
-        </div>
-        <div className="projectRectangles">
-          <div className="rectangle-1" />
-          <div className="rectangle-2" />
-          <div className="rectangle-3" />
-          <div className="rectangle-4" />
-        </div>
-      </div>
-
-      <div className="spacer" />
-
-      <div className="adv">
-        <div className="advertisement-text">advertisement</div>
-      </div>
-
-      <div className="spacer" />
-
       
-
-      <div className="projectsPage">
-        <div className="projectTitle">
-          <h1>RECENTS</h1>
-        </div>
-
-        <div className="projectRectangles">
-          <div className="rectangle-1" />
-          <div className="rectangle-2" />
-          <div className="rectangle-3" />
-          <div className="rectangle-4" />
-        </div>
-      </div>
-
-      <div className="spacer" />
-
-      <div className="adv">
-        <div className="advertisement-text">advertisement</div>
-      </div>
     </div>
   );
 };
 
-
-
-
-
-
 export default Home;
-
-
