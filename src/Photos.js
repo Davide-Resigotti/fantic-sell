@@ -28,7 +28,7 @@ function Photos() {
       <Link to="/">
       <FaHome className='iconHome'/>
       </Link>
-      <h1 className='foto'>FOTO</h1>
+      <h1 >FOTO</h1>
     </div>
     <div className="projectRectangles">
       <img src="/front-left.jpeg" alt="" className="rectangle-1" onClick={() => handleImageClick('/front-left.jpeg')} />
