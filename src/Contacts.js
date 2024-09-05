@@ -63,16 +63,18 @@ function Contacts() {
       <div className="subtitle">
         <h2>EMAIL : </h2>
         <a className='mailTel' href="mailto:idavide.resi@gmail.com">idavide.resi@gmail.com</a>
+      </div>
+  
+<div className="spacer"></div>
 
-        <div className="spacer"></div>
-      
+      <div className="subtitle">
         <h2>TELEFONO : </h2>
         <a className='mailTel' href="tel:+393703138629">+393703138629</a>
       </div>
 
       <div className="form-container">
         <form id="contactForm" onSubmit={handleSubmit}>
-          <h3>SONO INTERESSATO</h3>
+          <h1>SONO INTERESSATO</h1>
           
           <div className="input-group">
             <label htmlFor="firstName">Nome</label>
