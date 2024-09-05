@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/fantic-sell/static/css/main.9c205086.css",
+    "main.css": "/fantic-sell/static/css/main.ca2ddf02.css",
     "main.js": "/fantic-sell/static/js/main.3018cb90.js",
     "static/js/453.a501beda.chunk.js": "/fantic-sell/static/js/453.a501beda.chunk.js",
     "index.html": "/fantic-sell/index.html",
-    "main.9c205086.css.map": "/fantic-sell/static/css/main.9c205086.css.map",
+    "main.ca2ddf02.css.map": "/fantic-sell/static/css/main.ca2ddf02.css.map",
     "main.3018cb90.js.map": "/fantic-sell/static/js/main.3018cb90.js.map",
     "453.a501beda.chunk.js.map": "/fantic-sell/static/js/453.a501beda.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9c205086.css",
+    "static/css/main.ca2ddf02.css",
     "static/js/main.3018cb90.js"
   ]
 }
