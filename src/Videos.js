@@ -1,8 +1,7 @@
 
-import './Home.css';
+import './Contents.css';
 import { Link } from 'react-router-dom';
 import { FaHome } from "react-icons/fa";
-import { useState } from 'react';
 
 function Videos() {
 

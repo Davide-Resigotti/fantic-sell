@@ -1,9 +1,171 @@
-import React from 'react'
+import React, { useState } from 'react';
+import './Contacts.css';
+import { Link } from 'react-router-dom';
+import { FaHome } from "react-icons/fa";
 
 function Contacts() {
+  const [formState, setFormState] = useState({
+    firstName: '',
+    lastName: '',
+    phone: '',
+    email: '',
+    message: ''
+  });
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setFormState(prevState => ({
+      ...prevState,
+      [name]: value
+    }));
+  };
+
+  const handleFocus = (event) => {
+    const label = event.target.closest('.input-group').querySelector('label');
+    if (label) {
+      label.classList.add('focused');
+    }
+  };
+
+  const handleBlur = (event) => {
+    const label = event.target.closest('.input-group').querySelector('label');
+    if (label && !event.target.value) {
+      label.classList.remove('focused');
+    }
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    const { firstName, lastName, phone, email, message } = formState;
+
+    const subject = encodeURIComponent('Interessato Vendita Fantic');
+    const body = encodeURIComponent(`Nome: ${firstName}\nCognome: ${lastName}\nTelefono: ${phone}\nEmail: ${email}\n\nMessaggio:\n${message}`);
+
+    const mailtoLink = `mailto:idavide.resi@gmail.com?subject=${subject}&body=${body}`;
+
+    window.location.href = mailtoLink;
+  };
+
   return (
-    <div>Contacts</div>
-  )
+    <div className="main">
+
+<div className="title">
+      <Link to="/">
+      <FaHome className='iconHome'/>
+      </Link>
+      <h1 >CONTATTI</h1>
+    </div>
+
+
+ 
+
+      <div className="subtitle">
+        <h2>EMAIL : </h2>
+        <a className='mailTel' href="mailto:idavide.resi@gmail.com">idavide.resi@gmail.com</a>
+
+        <div className="spacer"></div>
+      
+        <h2>TELEFONO : </h2>
+        <a className='mailTel' href="tel:+393703138629">+393703138629</a>
+      </div>
+
+      <div className="form-container">
+        <form id="contactForm" onSubmit={handleSubmit}>
+          <h3>SONO INTERESSATO</h3>
+          
+          <div className="input-group">
+            <label htmlFor="firstName">Nome</label>
+            <div className="input-icon">
+              <input 
+                type="text" 
+                id="firstName" 
+                name="firstName" 
+                placeholder=" " 
+                required 
+                value={formState.firstName}
+                onChange={handleChange}
+                onFocus={handleFocus}
+                onBlur={handleBlur}
+              />
+              <i className="fas fa-user"></i>
+            </div>
+          </div>
+          
+          <div className="input-group">
+            <label htmlFor="lastName">Cognome</label>
+            <div className="input-icon">
+              <input 
+                type="text" 
+                id="lastName" 
+                name="lastName" 
+                placeholder=" " 
+                required 
+                value={formState.lastName}
+                onChange={handleChange}
+                onFocus={handleFocus}
+                onBlur={handleBlur}
+              />
+              <i className="fas fa-user"></i>
+            </div>
+          </div>
+          
+          <div className="input-group">
+            <label htmlFor="phone">Telefono</label>
+            <div className="input-icon">
+              <input 
+                type="tel" 
+                id="phone" 
+                name="phone" 
+                placeholder=" " 
+                required 
+                value={formState.phone}
+                onChange={handleChange}
+                onFocus={handleFocus}
+                onBlur={handleBlur}
+              />
+              <i className="fas fa-phone"></i>
+            </div>
+          </div>
+          
+          <div className="input-group">
+            <label htmlFor="email">Email</label>
+            <div className="input-icon">
+              <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                placeholder=" " 
+                required 
+                value={formState.email}
+                onChange={handleChange}
+                onFocus={handleFocus}
+                onBlur={handleBlur}
+              />
+              <i className="fas fa-envelope"></i>
+            </div>
+          </div>
+          
+          <div className="input-group">
+            <label htmlFor="message">Messaggio</label>
+            <textarea 
+              id="message" 
+              name="message" 
+              rows="5" 
+              placeholder=" " 
+              required 
+              value={formState.message}
+              onChange={handleChange}
+              onFocus={handleFocus}
+              onBlur={handleBlur}
+            ></textarea>
+          </div>
+          
+          <button type="submit" id="submitBtn">INVIA</button>
+        </form>
+      </div>
+    </div>
+  );
 }
 
-export default Contacts
+export default Contacts;
