@@ -7,7 +7,7 @@ import Contacts from './Contacts';
 
 const App = () => {
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}> 
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/photos" element={<Photos />} />
