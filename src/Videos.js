@@ -16,42 +16,42 @@ function Videos() {
       <h1 className='foto'>VIDEO</h1>
       </div>
       <div className="projectRectangles" >
-      <video alt="accensione" controls audio className="rectangle" preload="metadata">
+      <video alt="accensione" controls audio className="rectangle" >
         <source src="./start.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
-      <video controls audio className="rectangle" preload="metadata">
+      <video controls audio className="rectangle" >
         <source src="./left-arrow.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
-      <video controls audio className="rectangle" preload="metadata">
+      <video controls audio className="rectangle" >
         <source src="./right-arrow.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
-      <video controls audio className="rectangle" preload="metadata">
+      <video controls audio className="rectangle" >
         <source src="./high-beam-headlights.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
-      <video controls audio className="rectangle" preload="metadata">
+      <video controls audio className="rectangle" >
         <source src="./stop-light.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
-      <video controls audio className="rectangle" preload="metadata">
+      <video controls audio className="rectangle" >
         <source src="./degassing.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
-      <video controls audio className="rectangle" preload="metadata">
+      <video controls audio className="rectangle" >
         <source src="./engine-off.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
-      <video controls audio className="rectangle" preload="metadata">
+      <video controls audio className="rectangle" >
         <source src="./plate.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
