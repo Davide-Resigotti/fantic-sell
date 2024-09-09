@@ -9,10 +9,10 @@ const App = () => {
   return (
     <Router basename={process.env.PUBLIC_URL}> 
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/photos" element={<Photos />} />
-        <Route path="/videos" element={<Videos />} />
-        <Route path="/contacts" element={<Contacts />} />
+        <Route path="/fantic-sell" element={<Home />} />
+        <Route path="/fantic-sell/photos" element={<Photos />} />
+        <Route path="/fantic-sell/videos" element={<Videos />} />
+        <Route path="/fantic-sell/contacts" element={<Contacts />} />
       </Routes>
     </Router>
   );
