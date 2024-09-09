@@ -60,7 +60,6 @@ height: 5vh;
   .form-container {
  
     border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 50vw;
     animation: fadeIn 1s ease-out;
@@ -177,7 +176,7 @@ h1{
     .form-container {
  
         border-radius: 10px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+
         width: 100%;
         max-width: 70vw;
         animation: fadeIn 1s ease-out;

@@ -123,8 +123,9 @@ function Photos() {
       <img src="./parts/IMG_3812.jpeg" alt="" className="rectangle" onClick={() => handleImageClick('./parts/IMG_3812.jpeg')} loading="lazy" />
       <img src="./parts/IMG_3813.jpeg" alt="" className="rectangle" onClick={() => handleImageClick('./parts/IMG_3813.jpeg')} loading="lazy" />
       <img src="./parts/IMG_3814.jpeg" alt="" className="rectangle" onClick={() => handleImageClick('./parts/IMG_3814.jpeg')} loading="lazy" />
-
+      <br />
     </div>
+    <br />
     </div>
     )
 }

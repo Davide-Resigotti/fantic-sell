@@ -166,6 +166,7 @@ function Contacts() {
           <button type="submit" id="submitBtn">INVIA</button>
         </form>
       </div>
+      <br />
     </div>
   );
 }
