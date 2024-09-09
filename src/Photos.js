@@ -28,7 +28,7 @@ function Photos() {
       <Link to="/">
       <FaHome className='iconHome'/>
       </Link>
-      <h1 >FOTO</h1>
+      <h2 >FOTO</h2>
     </div>
     <div className="projectRectangles">
       <img src="./front-left.jpeg" alt="" className="rectangle" onClick={() => handleImageClick('./front-left.jpeg')} loading="lazy" />

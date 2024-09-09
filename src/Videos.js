@@ -13,7 +13,7 @@ function Videos() {
       <Link to="/">
         <FaHome className='iconHome' />
       </Link>
-      <h1 className='foto'>VIDEO</h1>
+      <h2 className='foto'>VIDEO</h2>
       </div>
       <div className="projectRectangles" >
       <video alt="accensione" controls audio className="rectangle" >

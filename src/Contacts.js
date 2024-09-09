@@ -54,7 +54,7 @@ function Contacts() {
       <Link to="/">
       <FaHome className='iconHome'/>
       </Link>
-      <h1 >CONTATTI</h1>
+      <h2 >CONTATTI</h2>
     </div>
 
 

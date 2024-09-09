@@ -22,6 +22,9 @@ const Home = () => {
           <Link to="/videos">
             <button>VIDEO</button>
           </Link>
+          <Link to="/info">
+            <button>INFO</button>
+          </Link>
           <Link to="/contacts">
             <button>CONTATTI</button>
           </Link>

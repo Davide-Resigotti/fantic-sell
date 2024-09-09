@@ -1,0 +1,36 @@
+
+h1{
+    color: #ffffff;
+    text-align: center;
+    font-family: "Kanit-Medium", Helvetica;
+    font-size: 3vh;
+    line-height: 100%;
+    font-weight: 100%;
+    position: relative;
+    width: 70%;
+    font-weight: 600;
+    line-height: 150%;
+
+}
+
+.format{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #ffffff;
+    text-align: center;
+    font-family: "Kanit-Medium", Helvetica;
+    font-size: 3vh;
+    line-height: 100%;
+    font-weight: 100%;
+    position: relative;
+    width: 70%;
+    font-weight: 600;
+    line-height: 150%;
+}
+
+.row{
+    text-align: center;
+
+}
