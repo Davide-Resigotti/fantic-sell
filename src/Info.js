@@ -61,7 +61,7 @@ function Info() {
                 <ul>
                     <li>Marmitta KatRace passaggio basso calcolata 76cc</li>
                     <li>Collettore 360 Polini</li>
-                    <li>Pacco Lamellare VL18</li>
+                    <li>Pacco Lamellare Malossi VL18</li>
                     <li>Carburatore mikuni 24</li>
                     <li>Accensione mvt dd12 con luci</li>
                     <li>Gas Rapido Polini</li>
