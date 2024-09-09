@@ -1,36 +1,113 @@
 
+
 h1{
     color: #ffffff;
-    text-align: center;
     font-family: "Kanit-Medium", Helvetica;
     font-size: 3vh;
-    line-height: 100%;
-    font-weight: 100%;
     position: relative;
-    width: 70%;
     font-weight: 600;
     line-height: 150%;
-
 }
 
-.format{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+li,p{
+
     color: #ffffff;
-    text-align: center;
+
     font-family: "Kanit-Medium", Helvetica;
-    font-size: 3vh;
-    line-height: 100%;
-    font-weight: 100%;
+    font-size: 2vh;
     position: relative;
-    width: 70%;
     font-weight: 600;
     line-height: 150%;
 }
 
-.row{
+.descrizione{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
     text-align: center;
+    padding-left: 1vw;
+    padding-right: 1vw;
+}
+
+
+.conclusioni{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    text-align: center;
+    flex-direction: column;
+
+    border-radius: 30px;
+    padding-left: 1vw;
+    padding-right: 1vw;
+}
+
+.pregi,
+.difetti{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        flex-direction: column;
+        background-color: #2e2e2e;
+        border-radius: 30px;
+        padding-left: 1vw;
+        padding-right: 1vw;
+
+   
+}
+
+.pezzi-a-parte{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 50%;
+    flex-direction: column;
+    background-color: #2e2e2e;
+    border-radius: 30px;
+    padding-left: 1vw;
+    padding-right: 1vw;
+
+
+}
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+
+    h1{
+        font-size: 3vh;
+    }
+
+    li,p{
+        font-size: 2.5vh;
+    }
+
+    .descrizione{
+        width: 90%;
+    }
+
+    .conclusioni{
+        width: 90%;
+    }
+
+    .pregi,
+    .difetti{
+        width: 90%;
+    }
+
+    .pezzi-a-parte{
+        max-width: 90%;
+    }
+
+
 
 }
