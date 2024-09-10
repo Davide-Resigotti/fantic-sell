@@ -65,12 +65,27 @@ function Contacts() {
         <a className='mailTel' href="mailto:idavide.resi@gmail.com">idavide.resi@gmail.com</a>
       </div>
   
-<div className="spacer"></div>
+{/* <div className="spacer"></div> */}
 
       <div className="subtitle">
         <h2>TELEFONO : </h2>
         <a className='mailTel' href="tel:+393703138629">+393703138629</a>
       </div>
+
+
+
+
+   
+      <div className="siti">
+        <a href="https://example.com" target="_blank" rel="noreferrer" >
+          <img className='subito' src="./subito.png" alt=""  />
+        </a>
+        <a href="https://example.com" target="_blank" rel="noreferrer" >
+          <img className='subito' src="./moto.jpg" alt="" />
+        </a>
+      </div>
+
+
 
       <div className="form-container">
         <form id="contactForm" onSubmit={handleSubmit}>
@@ -167,6 +182,9 @@ function Contacts() {
         </form>
       </div>
       <br />
+
+
+
     </div>
   );
 }
