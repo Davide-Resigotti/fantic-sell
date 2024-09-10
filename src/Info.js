@@ -26,6 +26,7 @@ function Info() {
             <div className="pregi">
                 <h2 className='subtitles'>PREGI</h2>
                 <ul>
+                    <li>Omologata per 2.</li>
                     <li>La moto è stata completamente smontata, pulita e rimontata con cura, mantenendo tutti i pezzi originali. L'unica modifica riguarda l'albero motore rinforzato, sostituito in seguito a una precedente elaborazione.</li>
                     <li>Il gruppo termico, l'albero motore rinforzato e tutti i componenti principali hanno percorso meno di 15.000 km.</li>
                     <li>Gomme nuove con meno di 100 km di utilizzo.</li>

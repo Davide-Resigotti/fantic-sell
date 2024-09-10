@@ -70,9 +70,6 @@ function Photos() {
     </div>
 
       <div className="projectRectangles">
-      <img src="./parts/IMG_3762.jpeg" alt="" className="rectangle" onClick={() => handleImageClick('./parts/IMG_3762.jpeg')} loading="lazy" />
-      <img src="./parts/IMG_3763.jpeg" alt="" className="rectangle" onClick={() => handleImageClick('./parts/IMG_3763.jpeg')} loading="lazy" />
-      <img src="./parts/IMG_3764.jpeg" alt="" className="rectangle" onClick={() => handleImageClick('./parts/IMG_3764.jpeg')} loading="lazy" />
       <img src="./parts/IMG_3765.jpeg" alt="" className="rectangle" onClick={() => handleImageClick('./parts/IMG_3765.jpeg')} loading="lazy" />
       <img src="./parts/IMG_3766.jpeg" alt="" className="rectangle" onClick={() => handleImageClick('./parts/IMG_3766.jpeg')} loading="lazy" />
       <img src="./parts/IMG_3767.jpeg" alt="" className="rectangle" onClick={() => handleImageClick('./parts/IMG_3767.jpeg')} loading="lazy" />
