@@ -77,10 +77,10 @@ function Contacts() {
 
    
       <div className="siti">
-        <a href="https://example.com" target="_blank" rel="noreferrer" >
+        <a href="https://www.subito.it/moto-e-scooter/fantic-motard-50-2018-bergamo-568562718.htm?utm_medium=referral&utm_source=subito&utm_campaign=free-engagement-ad_detail" target="_blank" rel="noreferrer" >
           <img className='subito' src="./subito.png" alt=""  />
         </a>
-        <a href="https://example.com" target="_blank" rel="noreferrer" >
+        <a href="https://www.moto.it/moto-usate/fantic-motor/motard-50/motard-50-m-casa-2t-2018/9525909#google_vignette" target="_blank" rel="noreferrer" >
           <img className='subito' src="./moto.jpg" alt="" />
         </a>
       </div>

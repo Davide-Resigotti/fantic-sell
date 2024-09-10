@@ -51,7 +51,7 @@ function Info() {
                 <h2 className='subtitles'>DIFETTI</h2>
                 <ul>
                     <li>Alcuni graffi leggeri sui cerchi e segni più evidenti sul forcellone (é una moto usata).</li>
-                    <li>Mancanza del pulsante del clacson..</li>
+                    <li>Mancanza del pulsante del clacson.</li>
                     <li>Assenza delle grafiche originali, rimosse a causa di un inizio di distacco. Le grafiche sono ancora presenti sui paramani e sui forcelloni.</li>
                     <li>2 attacchi motore del telaio sono stati risaldati dopo la rottura.</li>
                     <li>Revisione scaduta</li>

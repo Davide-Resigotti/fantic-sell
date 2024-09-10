@@ -64,7 +64,7 @@ function Photos() {
     </div>
 
 
-    <div>
+    <div className='parte'>
       <h2>⬇️⬇️PEZZI VENDUTI A PARTE⬇️⬇️</h2>
       <h1>se comprati con la moto tutto a .... (da decidere)</h1>
     </div>

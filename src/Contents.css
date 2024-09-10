@@ -13,6 +13,10 @@
   
   
   }
+
+  .parte{
+    text-align: center;
+  }
   
   .projectTitle{
     display: flex;
