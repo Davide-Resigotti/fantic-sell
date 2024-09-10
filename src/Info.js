@@ -18,6 +18,9 @@ function Info() {
                 <h1>
                     Vendesi Fantic 50 Casa Motard, anno 2018, immatricolata il 25/07/2018. La moto è stata acquistata dal precedente proprietario presso il concessionario ufficiale Fantic Bruno Moto (BG). Si tratta di una moto curata e tenuta con grande attenzione, pronta per essere guidata.
                 </h1>
+                <h1>
+                    PREZZO : 3000€ trattabili
+                </h1>
 
             </div>
 
@@ -36,7 +39,8 @@ function Info() {
                     <li>Gomme: Pirelli Diablo Rosso 2.</li>
                     <li>Blocca sterzo funzionante.</li>
                     <li>La moto è stata verificata in ogni dettaglio e tutti i componenti elettrici funzionano correttamente.</li>
-                    <li>Insieme do anche manopole nere/rosse domino usate pochissimo-dispongo del manuale di istruzioni del veicolo.</li>
+                    <li>Insieme do anche manopole nere/rosse domino usate pochissimo.</li>
+                    <li>dispongo del manuale di istruzioni del veicolo.</li>
                 </ul>
 
             </div>

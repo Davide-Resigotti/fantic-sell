@@ -28,6 +28,7 @@ li,p{
     text-align: center;
     padding-left: 1vw;
     padding-right: 1vw;
+    flex-direction: column;
 }
 
 
