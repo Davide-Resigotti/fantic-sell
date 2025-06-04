@@ -19,7 +19,7 @@ function Info() {
                     Vendesi Fantic 50 Casa Motard, anno 2018, immatricolata il 25/07/2018. La moto è stata acquistata dal precedente proprietario presso il concessionario ufficiale Fantic Bruno Moto (BG). Si tratta di una moto curata e tenuta con grande attenzione, pronta per essere guidata.
                 </h1>
                 <h1>
-                    PREZZO : 2700€ trattabili
+                    PREZZO : 2400€ trattabili
                 </h1>
 
             </div>
