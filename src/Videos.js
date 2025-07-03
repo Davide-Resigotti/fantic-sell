@@ -1,4 +1,3 @@
-
 import './Contents.css';
 import { Link } from 'react-router-dom';
 import { FaHome } from "react-icons/fa";
@@ -17,46 +16,45 @@ function Videos() {
       </div>
       <div className="projectRectangles" >
       <video alt="accensione" controls audio className="rectangle" >
-        <source src="./start.mp4" type="video/mp4" />
+        <source src={process.env.PUBLIC_URL + '/start.mp4'} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
       <video controls audio className="rectangle" >
-        <source src="./left-arrow.mp4" type="video/mp4" />
+        <source src={process.env.PUBLIC_URL + '/left-arrow.mp4'} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
       <video controls audio className="rectangle" >
-        <source src="./right-arrow.mp4" type="video/mp4" />
+        <source src={process.env.PUBLIC_URL + '/right-arrow.mp4'} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
       <video controls audio className="rectangle" >
-        <source src="./high-beam-headlights.mp4" type="video/mp4" />
+        <source src={process.env.PUBLIC_URL + '/high-beam-headlights.mp4'} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
       <video controls audio className="rectangle" >
-        <source src="./stop-light.mp4" type="video/mp4" />
+        <source src={process.env.PUBLIC_URL + '/stop-light.mp4'} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
       <video controls audio className="rectangle" >
-        <source src="./degassing.mp4" type="video/mp4" />
+        <source src={process.env.PUBLIC_URL + '/degassing.mp4'} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
       <video controls audio className="rectangle" >
-        <source src="./engine-off.mp4" type="video/mp4" />
+        <source src={process.env.PUBLIC_URL + '/engine-off.mp4'} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
       <video controls audio className="rectangle" >
-        <source src="./plate.mp4" type="video/mp4" />
+        <source src={process.env.PUBLIC_URL + '/plate.mp4'} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
-    
-      </div>
+    </div>
       <br />
 
       
