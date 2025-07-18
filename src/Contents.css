@@ -81,16 +81,78 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.8);
+    background: black;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 1000;
+    user-select: none;
+  }
+  
+  .full-screen-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
   }
   
   .full-screen-image {
     max-width: 95%;
     max-height: 95%;
+    user-select: none;
+    -webkit-user-select: none;
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .nav-btn {
+    position: absolute;
+    top: calc(50% - 25px);
+    background: transparent;
+    border-color: transparent;
+    color: white;
+    font-size: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1001;
+    cursor: pointer;
+  }
+
+  .nav-btn-left {
+    left: -20px;
+  }
+
+  .nav-btn-right {
+    right: -20px;
+  }
+
+  /* Loading progress indicator */
+  .loading-progress {
+    margin-top: 0.5rem;
+    color: #ccc;
+    font-size: 0.8rem;
+  }
+
+  /* Loading bar - same style as valenti-sell */
+  .loading-bar {
+    width: 200px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 2px;
+    margin: 0.5rem auto 0;
+    overflow: hidden;
+  }
+
+  .loading-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #4CAF50, #45a049);
+    transition: width 0.3s ease;
+    border-radius: 2px;
   }
 
 
@@ -145,6 +207,27 @@
       /* Ensure video posters (thumbnails) display correctly */
       .projectRectangles > video[poster] {
         object-fit: cover;
+      }
+
+      /* Mobile navigation buttons */
+      .nav-button {
+        font-size: 1.5rem;
+        padding: 10px 15px;
+      }
+
+      .nav-prev {
+        left: 1rem;
+      }
+
+      .nav-next {
+        right: 1rem;
+      }
+
+      /* Mobile image counter */
+      .image-counter {
+        bottom: 1rem;
+        font-size: 0.8rem;
+        padding: 6px 12px;
       }
 
   }  

@@ -5,31 +5,8 @@ import Photos from './Photos';
 import Videos from './Videos';
 import Contacts from './Contacts';
 import Info from './Info';
-import { useMediaPreload } from './hooks/useMediaPreload';
 
 const App = () => {
-  // Inizia il preload di video e immagini quando l'app si carica
-  const { 
-    totalPreloaded, 
-    loadingPhase, 
-    imagesLoaded, 
-    videosLoaded, 
-    thumbnailsLoaded 
-  } = useMediaPreload();
-  
-  // Mostra progress del caricamento
-  React.useEffect(() => {
-    if (totalPreloaded > 0) {
-      console.log(`📊 Media preload progress:`, {
-        phase: loadingPhase,
-        images: imagesLoaded,
-        thumbnails: thumbnailsLoaded,
-        videos: videosLoaded,
-        total: totalPreloaded
-      });
-    }
-  }, [totalPreloaded, loadingPhase, imagesLoaded, videosLoaded, thumbnailsLoaded]);
-
   return (
     <Router> 
       <Routes>
