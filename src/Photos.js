@@ -6,44 +6,38 @@ import { FaHome } from "react-icons/fa";
 function Photos() {
   const [fullScreenImage, setFullScreenImage] = useState(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const [loadedMainPhotos, setLoadedMainPhotos] = useState(0);
+  const [loadedPhotos, setLoadedPhotos] = useState(0);
   const [loadedParts, setLoadedParts] = useState(0);
 
   // Add state to store scroll position
   const [scrollPosition, setScrollPosition] = useState(0);
 
-  // All main images in order - adapted for fantic-sell media
+  // All images in order - adapted for fantic-sell media (WebP only)
   const allImages = useMemo(() => [
-    'front-left.jpeg', 'front-right.jpeg', 'back-wheel-left.jpeg', 'back-wheel-right.jpeg',
-    'rear-tyre.jpeg', 'IMG_3746.jpeg', 'IMG_3747.jpeg', 'IMG_3745.jpeg', 'front-brake.jpeg',
-    'engine-left.jpeg', 'engine-right.jpeg', 'engine-closer.jpeg', 'down.jpeg', 'IMG_3731.jpeg',
-    'IMG_3733.jpeg', 'IMG_3734.jpeg', 'IMG_3735.jpeg', 'IMG_3736.jpeg', 'IMG_3738.jpeg',
-    'IMG_3739.jpeg', 'IMG_3740.jpeg', 'IMG_3741.jpeg', 'IMG_3742.jpeg', 'up.jpeg',
-    'IMG_3743.jpeg', 'IMG_3748.jpeg', 'IMG_3750.jpeg', 'documents.jpeg', 'parts.jpeg'
+    'front-left.webp', 'front-right.webp', 'back-wheel-left.webp', 'back-wheel-right.webp',
+    'rear-tyre.webp', 'IMG_3746.webp', 'IMG_3747.webp', 'IMG_3745.webp', 'front-brake.webp',
+    'engine-left.webp', 'engine-right.webp', 'engine-closer.webp', 'down.webp', 'IMG_3731.webp',
+    'IMG_3733.webp', 'IMG_3734.webp', 'IMG_3735.webp', 'IMG_3736.webp', 'IMG_3738.webp',
+    'IMG_3739.webp', 'IMG_3740.webp', 'IMG_3741.webp', 'IMG_3742.webp', 'up.webp',
+    'IMG_3743.webp', 'IMG_3748.webp', 'IMG_3750.webp', 'documents.webp', 'parts.webp',
+    // Parts images - adapted for fantic-sell media (WebP only)
+    'IMG_3765.webp', 'IMG_3766.webp', 'IMG_3767.webp', 'IMG_3768.webp', 'IMG_3769.webp',
+    'IMG_3770.webp', 'IMG_3771.webp', 'IMG_3772.webp', 'IMG_3773.webp', 'IMG_3774.webp',
+    'IMG_3775.webp', 'IMG_3776.webp', 'IMG_3777.webp', 'IMG_3778.webp', 'IMG_3779.webp',
+    'IMG_3780.webp', 'IMG_3781.webp', 'IMG_3782.webp', 'IMG_3783.webp', 'IMG_3784.webp',
+    'IMG_3785.webp', 'IMG_3786.webp', 'IMG_3787.webp', 'IMG_3788.webp', 'IMG_3789.webp',
+    'IMG_3790.webp', 'IMG_3791.webp', 'IMG_3792.webp', 'IMG_3793.webp', 'IMG_3794.webp',
+    'IMG_3795.webp', 'IMG_3796.webp', 'IMG_3797.webp', 'IMG_3798.webp', 'IMG_3799.webp',
+    'IMG_3800.webp', 'IMG_3801.webp', 'IMG_3802.webp', 'IMG_3803.webp', 'IMG_3804.webp',
+    'IMG_3805.webp', 'IMG_3806.webp', 'IMG_3807.webp', 'IMG_3808.webp', 'IMG_3809.webp',
+    'IMG_3810.webp', 'IMG_3811.webp', 'IMG_3812.webp', 'IMG_3813.webp', 'IMG_3814.webp'
   ], []);
 
-  // Parts images - adapted for fantic-sell media
-  const partImages = useMemo(() => [
-    'IMG_3765.jpeg', 'IMG_3766.jpeg', 'IMG_3767.jpeg', 'IMG_3768.jpeg', 'IMG_3769.jpeg',
-    'IMG_3770.jpeg', 'IMG_3773.jpeg', 'IMG_3774.jpeg', 'IMG_3775.jpeg', 'IMG_3776.jpeg',
-    'IMG_3777.jpeg', 'IMG_3778.jpeg', 'IMG_3779.jpeg', 'IMG_3780.jpeg', 'IMG_3781.jpeg',
-    'IMG_3782.jpeg', 'IMG_3783.jpeg', 'IMG_3784.jpeg', 'IMG_3785.jpeg', 'IMG_3786.jpeg',
-    'IMG_3787.jpeg', 'IMG_3788.jpeg', 'IMG_3789.jpeg', 'IMG_3790.jpeg', 'IMG_3791.jpeg',
-    'IMG_3792.jpeg', 'IMG_3793.jpeg', 'IMG_3794.jpeg', 'IMG_3795.jpeg', 'IMG_3796.jpeg',
-    'IMG_3797.jpeg', 'IMG_3798.jpeg', 'IMG_3799.jpeg', 'IMG_3800.jpeg', 'IMG_3801.jpeg',
-    'IMG_3802.jpeg', 'IMG_3803.jpeg', 'IMG_3804.jpeg', 'IMG_3805.jpeg', 'IMG_3806.jpeg',
-    'IMG_3807.jpeg', 'IMG_3808.jpeg', 'IMG_3809.jpeg', 'IMG_3810.jpeg', 'IMG_3811.jpeg',
-    'IMG_3812.jpeg', 'IMG_3813.jpeg', 'IMG_3814.jpeg'
-  ], []);
+  // Combined all images for navigation (photos + parts)
+  const combinedImages = useMemo(() => allImages, [allImages]);
 
-  // Combined all images for navigation (main photos + parts)
-  const combinedImages = useMemo(() => [
-    ...allImages,
-    ...partImages
-  ], [allImages, partImages]);
-
-  const photoImages = useMemo(() => allImages, [allImages]); // Main photos
-  const mainPartImages = useMemo(() => partImages, [partImages]); // Parts
+  const photoImages = useMemo(() => allImages.slice(0, 29), [allImages]); // First 29 are main photos
+  const partImages = useMemo(() => allImages.slice(29), [allImages]); // Rest are parts
 
   const handleImageClick = (src) => {
     const filename = src.split('/').pop();
@@ -83,15 +77,15 @@ function Photos() {
     }
 
     // Determine which folder the image is in - adapted for fantic-sell structure
-    let folder, newSrc;
-    if (newIndex < allImages.length) {
+    let newSrc;
+    if (newIndex < 29) {
       // Main photos folder (root public folder)
       newSrc = `${process.env.PUBLIC_URL}/${combinedImages[newIndex]}`;
     } else {
       // Parts folder
-      folder = 'parts';
-      const partIndex = newIndex - allImages.length;
-      newSrc = `${process.env.PUBLIC_URL}/${folder}/${partImages[partIndex]}`;
+      const partIndex = newIndex - 29;
+      const filename = partImages[partIndex];
+      newSrc = `${process.env.PUBLIC_URL}/parts/${filename}`;
     }
 
     setCurrentImageIndex(newIndex);
@@ -101,13 +95,13 @@ function Photos() {
   // Progressive loading: photos first, then parts, then videos (same logic as valenti-sell)
   useEffect(() => {
     const loadImagesSequentially = async () => {
-      // Load main photos in order
+      // Load photos in order
       for (let i = 0; i < photoImages.length; i++) {
         try {
           await new Promise((resolve, reject) => {
             const img = new Image();
             img.onload = () => {
-              setLoadedMainPhotos(i + 1);
+              setLoadedPhotos(i + 1);
               resolve();
             };
             img.onerror = reject;
@@ -116,12 +110,12 @@ function Photos() {
           });
         } catch (error) {
           console.log(`Failed to load photo ${photoImages[i]}, continuing...`);
-          setLoadedMainPhotos(i + 1); // Still increment to continue loading
+          setLoadedPhotos(i + 1); // Still increment to continue loading
         }
       }
 
-      // After all main photos, load parts in order
-      for (let i = 0; i < mainPartImages.length; i++) {
+      // After all photos, load parts in order
+      for (let i = 0; i < partImages.length; i++) {
         try {
           await new Promise((resolve, reject) => {
             const img = new Image();
@@ -130,10 +124,10 @@ function Photos() {
               resolve();
             };
             img.onerror = reject;
-            img.src = `${process.env.PUBLIC_URL}/parts/${mainPartImages[i]}`;
+            img.src = `${process.env.PUBLIC_URL}/parts/${partImages[i]}`;
           });
         } catch (error) {
-          console.log(`Failed to load part ${mainPartImages[i]}, continuing...`);
+          console.log(`Failed to load part ${partImages[i]}, continuing...`);
           setLoadedParts(i + 1); // Still increment to continue loading
         }
       }
@@ -206,7 +200,7 @@ function Photos() {
     // Start progressive loading after component mounts
     const timer = setTimeout(loadImagesSequentially, 100);
     return () => clearTimeout(timer);
-  }, [photoImages, mainPartImages]);
+  }, [photoImages, partImages]);
 
   return (
     <div className="projectsPage">
@@ -267,7 +261,7 @@ function Photos() {
       </div>
       <div className="projectRectangles">
         {photoImages.map((filename, index) => (
-          index < loadedMainPhotos ? (
+          index < loadedPhotos ? (
             <img
               key={index}
               src={`${process.env.PUBLIC_URL}/${filename}`}
@@ -301,7 +295,7 @@ function Photos() {
       </div>
 
       <div className="projectRectangles">
-        {mainPartImages.map((filename, index) => (
+        {partImages.map((filename, index) => (
           index < loadedParts ? (
             <img
               key={index}
