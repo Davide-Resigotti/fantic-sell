@@ -9,14 +9,26 @@ import { useMediaPreload } from './hooks/useMediaPreload';
 
 const App = () => {
   // Inizia il preload di video e immagini quando l'app si carica
-  const { totalPreloaded } = useMediaPreload();
+  const { 
+    totalPreloaded, 
+    loadingPhase, 
+    imagesLoaded, 
+    videosLoaded, 
+    thumbnailsLoaded 
+  } = useMediaPreload();
   
-  // Optional: mostra progress in console
+  // Mostra progress del caricamento
   React.useEffect(() => {
     if (totalPreloaded > 0) {
-      console.log(`Media preloaded: ${totalPreloaded} files`);
+      console.log(`📊 Media preload progress:`, {
+        phase: loadingPhase,
+        images: imagesLoaded,
+        thumbnails: thumbnailsLoaded,
+        videos: videosLoaded,
+        total: totalPreloaded
+      });
     }
-  }, [totalPreloaded]);
+  }, [totalPreloaded, loadingPhase, imagesLoaded, videosLoaded, thumbnailsLoaded]);
 
   return (
     <Router> 

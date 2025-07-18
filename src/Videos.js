@@ -1,8 +1,34 @@
 import './Contents.css';
 import { Link } from 'react-router-dom';
 import { FaHome } from "react-icons/fa";
+import { useEffect, useState } from 'react';
 
 function Videos() {
+  const [videoThumbnails, setVideoThumbnails] = useState({});
+
+  const videoData = [
+    { src: '/start.mp4', title: 'accensione' },
+    { src: '/left-arrow.mp4', title: 'freccia sinistra' },
+    { src: '/right-arrow.mp4', title: 'freccia destra' },
+    { src: '/high-beam-headlights.mp4', title: 'abbaglianti' },
+    { src: '/stop-light.mp4', title: 'luce stop' },
+    { src: '/degassing.mp4', title: 'decompressione' },
+    { src: '/engine-off.mp4', title: 'spegnimento motore' },
+    { src: '/plate.mp4', title: 'targa' }
+  ];
+
+  useEffect(() => {
+    // Load thumbnails from sessionStorage
+    const thumbnails = {};
+    videoData.forEach(video => {
+      const storedThumbnail = sessionStorage.getItem(`thumbnail_${video.src}`);
+      if (storedThumbnail) {
+        thumbnails[video.src] = storedThumbnail;
+      }
+    });
+    setVideoThumbnails(thumbnails);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []); // We want this to run only once on mount
 
 
   return (
@@ -15,46 +41,20 @@ function Videos() {
       <h2 className='foto'>VIDEO</h2>
       </div>
       <div className="projectRectangles" >
-      <video title="accensione" controls preload="metadata" className="rectangle" >
-        <source src={process.env.PUBLIC_URL + '/start.mp4'} type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-
-      <video title="freccia sinistra" controls preload="metadata" className="rectangle" >
-        <source src={process.env.PUBLIC_URL + '/left-arrow.mp4'} type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-
-      <video title="freccia destra" controls preload="metadata" className="rectangle" >
-        <source src={process.env.PUBLIC_URL + '/right-arrow.mp4'} type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-
-      <video title="abbaglianti" controls preload="metadata" className="rectangle" >
-        <source src={process.env.PUBLIC_URL + '/high-beam-headlights.mp4'} type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-
-      <video title="luce stop" controls preload="metadata" className="rectangle" >
-        <source src={process.env.PUBLIC_URL + '/stop-light.mp4'} type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-
-      <video title="decompressione" controls preload="metadata" className="rectangle" >
-        <source src={process.env.PUBLIC_URL + '/degassing.mp4'} type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-
-      <video title="spegnimento motore" controls preload="metadata" className="rectangle" >
-        <source src={process.env.PUBLIC_URL + '/engine-off.mp4'} type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-
-      <video title="targa" controls preload="metadata" className="rectangle" >
-        <source src={process.env.PUBLIC_URL + '/plate.mp4'} type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-    </div>
+        {videoData.map((video, index) => (
+          <video 
+            key={index}
+            title={video.title} 
+            controls 
+            preload="metadata" 
+            className="rectangle"
+            poster={videoThumbnails[video.src] || undefined}
+          >
+            <source src={process.env.PUBLIC_URL + video.src} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        ))}
+      </div>
       <br />
 
       
